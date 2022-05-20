@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradients</title>
+    <style>
+      /* Styles all elements to have a font size of 20 pixels by default. */
+      * {
+        box-sizing: border-box;
+        font-size: 20px;
+
+        scroll-behavior: smooth;
+      }
+
+      /*
+      Styles all elements in the body to have a font color of whitesmoke. It also 
+      sets the background to use an image of circles overlapping each other.
+    */
+      body {
+        color: whitesmoke;
+
+        /* Let us define an image using a URL to display an image as the background */
+        background-color: whitesmoke;
+
+        /* Lets us define which direction we want to have our image repeat in */
+        /* background-repeat: repeat-y; */
+
+        /* 
+        Define the size of our background image. In this case, it is 100% of the width
+        and the auto size for 100% of the width.
+      */
+        /* background-size: 100% auto; */
+
+        margin: 0;
+      }
+
+      nav {
+        width: 100%;
+
+        /* 
+        Defines a linear gradient background for the nav bar.
+        The linear gradient goes from right to left where the first
+        color #a8c0ff is on the right and the second color #3f2b96
+        is on the left.
+      */
+        background: linear-gradient(to left, #a8c0ff, #3f2b96);
+
+        /* 
+        Changes the background size of the gradient to be 100%
+        of the width of the nav and the auto height for the nav.
+      */
+        background-size: 100% auto;
+
+        padding: 1% 2%;
+      }
+
+      ul {
+        /* This gets rid of the bullet points beside each list item. */
+        list-style: none;
+      }
+
+      nav a {
+        /* Adds 4 pixels of space around the outside of each anchor in the nav */
+        margin: 4px;
+
+        /* Adds styling to the border of the element */
+        border: 2px solid black;
+
+        /* Adds 5 pixels of space around the inside of each anchor in the nav */
+        padding: 5px;
+
+        /* 
+        Sets the background colour of the nav to #00549E and the font color 
+        to be aliceblue.
+      */
+        background-color: #00549e;
+        color: aliceblue;
+
+        /* 
+        Defines a shadow for our text that has three separate shadows.
+        The first is going to be offset 0.2px in the right direction,
+        0.2 px offset in the down direction, have 0px of blur, and a black color to the shadow.
+        The second is going to be offset 0.5px in the right direction,
+        0.5 px offset in the down direction, have 0px of blur, and a black color to the shadow.
+        The third is going to be offset 0.8px in the right direction,
+        0.8 px offset in the down direction, have 0px of blur, and a black color to the shadow.
+      */
+        text-shadow: 0.2px 0.2px 0px black, 0.5px 0.5px 0px black,
+          0.8px 0.8px 0px black;
+
+        /* Sets the text to have a bolder font weight. */
+        font-weight: bolder;
+      }
+
+      /* 
+      Swaps out the colour scheme of anchors in the nav when they are hovered over 
+      or focused on.
+    */
+      nav a:hover,
+      nav a:focus {
+        background-color: #f0f8ff;
+        color: #00549e;
+      }
+
+      /* Changes the colour of the links that have been visited already. */
+      nav a:visited {
+        color: violet;
+      }
+
+      /* Uses descendant selectors to style all list items that are in the nav-link class elements */
+      nav a li {
+        /* 
+        Changes all list items in the nav so that they will display beside one another,
+        but still be affected by Box model properties.
+      */
+        display: inline-block;
+
+        /* Adds spacing around the outside of an element. */
+        margin: 4px;
+
+        /* Adds spacing on the inside of an element. */
+        padding: 5px;
+
+        font-size: 20px;
+      }
+
+      main {
+        margin: 5% 10%;
+      }
+
+      /* Styles all main headings to use font size of 48 pixels and center aligns the text. */
+      h1 {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: inline-block;
+
+        padding: 10px 30px;
+
+        font-size: 48px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        color: #00549e;
+        text-shadow: 0px 1px 1px black, 0px 1.5px 1px black, 0px 2px 1px black;
+      }
+
+      /* Changes the background color of the section to be #00549E. */
+      section {
+        background-color: #00549e;
+
+        padding: 10px 35px;
+      }
+
+      /* Changes the paragraphs in the section to have a bold font weight. */
+      section p {
+        font-weight: bold;
+      }
+
+      #back-to-top {
+        position: fixed;
+        right: 5px;
+        bottom: 5px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* 
+        By defining the width and height equally and using a
+        border-radius that is half of the width and height, we
+        create a perfectly circular back-to-top button.
+      */
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+
+        /* 
+        Defines a radial gradient for this circular back to top
+        button. where the first colour #3f2b96 is in the center 
+        of the circular area and goes to #a8c0ff on the outer
+        edges.
+      */
+        background: radial-gradient(#3f2b96, #a8c0ff);
+        color: whitesmoke;
+        text-shadow: 0px 1px 1px black, 0px 1.5px 1px black;
+        text-decoration: none;
+
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body id="top">
+    <nav>
+      <ul>
+        <a href="index.html" class="nav-link"><li>Inline CSS Page</li></a>
+        <a href="internal-css.html" class="nav-link"
+          ><li>Internal CSS Page</li></a
+        >
+        <a href="external-css.html" class="nav-link"
+          ><li>External CSS Page</li></a
+        >
+        <a href="testing-cascading.html" class="nav-link"
+          ><li>Testing Cascading Page</li></a
+        >
+        <a href="classes-and-ids.html" class="nav-link"
+          ><li>Classes and IDs Page</li></a
+        >
+        <a href="div-and-span.html" class="nav-link"
+          ><li>Div and Span Page</li></a
+        >
+        <a href="typography.html" class="nav-link"><li>Typography Page</li></a>
+        <a href="backgrounds-and-text.html" class="nav-link"
+          ><li>Backgrounds and Text Page</li></a
+        >
+        <a href="gradients.html" class="nav-link"><li>Gradients Page</li></a>
+      </ul>
+    </nav>
+    <main>
+      <h1>Gradients</h1>
+      <section>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+        <p>School-appropriate filler</p>
+      </section>
+    </main>
+    <a href="#top" id="back-to-top">&#9651;</a>
+  </body>
+</html>

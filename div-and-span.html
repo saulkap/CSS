@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dives and Spans - CSS</title>
+  </head>
+  <style>
+    body {
+      background-color: #fbfbfe;
+      color: #15210b;
+    }
+    h1 {
+      text-align: center;
+      font-size: 40px;
+    }
+    p {
+      font-size: 24px;
+    }
+    #styled-By-Id {
+      font-family: Georgia, Cambria, serif;
+      font-weight: bold;
+    }
+    ul {
+      list-style: none;
+    }
+    li {
+      padding: 5px;
+      margin: 4px;
+      font-size: 20px;
+    }
+    .nav-link {
+      padding: 5px;
+      margin: 4px;
+      border: 2px solid black;
+      background-color: #003100;
+      color: #eeffee;
+    }
+    .nav-link li {
+      display: inline-block;
+    }
+    div {
+      background-color: ghostwhite;
+      height: 140pxx;
+      width: auto;
+    }
+    span {
+      background-color: beige;
+      font-style: italic;
+    }
+  </style>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <a href="index.html" class="nav-link"><li>CSS Homepage</li></a>
+          <a href="internal-css.html" class="nav-link"
+            ><li>Internal Css Page</li></a
+          >
+          <a href="external-css.html" class="nav-link"
+            ><li>External Css Page</li></a
+          >
+          <a href="testing-cascading.html" class="nav-link"
+            ><li>Testing-Cascading Page</li></a
+          >
+          <a href="classes-and-ids.html" class="nav-link"
+            ><li>Classes and IDs</li></a
+          >
+          <a href="div-and-span.html" class="nav-link"
+            ><li>Divs and Spans</li></a
+          >
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Internal CSS</h1>
+      <div>
+        <p>
+          This page shows the effects of adding divs and spans with CSS to HTML
+          tags.
+        </p>
+        <p id="styled-By-Id">
+          This paragraph will show the effect of giving an element an ID and
+          <span>styling</span> that ID
+        </p>
+      </div>
+    </main>
+  </body>
+</html>
