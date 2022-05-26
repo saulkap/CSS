@@ -5,8 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inline CSS</title>
+    <style>
+      body {
+        background-color: #fbfbfe;
+        color: #15210b;
+      }
+      h1 {
+        text-align: center;
+        font-size: 40px;
+
+        visibility: hidden;
+
+        -o-animation: swivel 1s ease-in-out 0.3s forwards;
+        -moz-animation: swivel 1s ease-in-out 0.3s forwards;
+        -webkit-animation: swivel 1s ease-in-out 0.3s forwards;
+        animation: swivel 1s ease-in-out 0.3s forwards;
+      }
+
+      @keyframes swivel {
+        from {
+          transform: rotateY(90deg);
+        }
+        to {
+          transform: rotateY(0deg);
+          visibility: visible;
+        }
+      }
+    </style>
   </head>
-  <body style="background-color: #fbfbfe; color: #15210b">
+  <body>
     <header>
       <nav>
         <ul>
@@ -20,7 +47,7 @@
       </nav>
     </header>
     <main>
-      <h1 style="text-align: center; font-size: 40px">Inline CSS</h1>
+      <h1>Inline CSS</h1>
       <p style="font-size: 24px">
         This page shows the effects of adding inline CSS to HTML tags.
       </p>
